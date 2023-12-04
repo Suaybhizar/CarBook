@@ -1,8 +1,6 @@
 ﻿using CarBook.Application.Features.CQRS.Commands.CategoryCommands;
 using CarBook.Application.Features.CQRS.Handlers.CategoryHandlers;
-using CarBook.Application.Features.CQRS.Handlers.CategoryHandlers;
 using CarBook.Application.Features.CQRS.Queries.CategoryQueries;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarBook.WebApi.Controllers

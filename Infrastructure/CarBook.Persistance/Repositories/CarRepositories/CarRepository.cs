@@ -21,7 +21,7 @@ namespace CarBook.Persistance.Repositories.CarRepositories
 
         public async Task<List<Car>> GetCarsListWithBrandsAsync()
         {
-            var values = _context.Cars.Include(x => x.Brand).ToList();
+            var values =await _context.Cars.Include(x => x.Brand).ToListAsync();
             return values;
         }
     }
