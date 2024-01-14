@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -8,17 +7,17 @@
 
 @await Component.InvokeAsync("_HeadUILayoutComponentPartial")
 
-  <body>
+<body>
     @await Component.InvokeAsync("_NavbarUILayoutComponentPartial")
 
     @await Component.InvokeAsync("_MainCoverUILayoutComponentPartial")
-    
+
     @RenderBody()
 
     @await Component.InvokeAsync("_FooterUILayoutComponentPartial")
 
     @await Component.InvokeAsync("_ScriptUILayoutComponentPartial")
-    
-  </body>
+
+</body>
 </html>
 
