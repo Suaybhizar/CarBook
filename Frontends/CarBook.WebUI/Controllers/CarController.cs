@@ -17,7 +17,7 @@ namespace CarBook.WebUI.Controllers
         {
 
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7136/api/Cars/GetCarWithBrand");
+            var responseMessage = await client.GetAsync("https://localhost:44319/api/Cars/GetCarWithBrand");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();

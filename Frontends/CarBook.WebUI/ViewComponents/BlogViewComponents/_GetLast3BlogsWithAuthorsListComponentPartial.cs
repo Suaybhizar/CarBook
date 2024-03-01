@@ -1,15 +1,15 @@
-﻿using CarBook.Dto.FooterAdressDtos;
+﻿using CarBook.Dto.BlogDtos;
 using CarBook.Dto.TestimonialDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace CarBook.WebUI.ViewComponents.FooterAddressComponents
+namespace CarBook.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _FooterAddressComponentPartial : ViewComponent
+    public class _GetLast3BlogsWithAuthorsListComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _FooterAddressComponentPartial(IHttpClientFactory httpClientFactory)
+        public _GetLast3BlogsWithAuthorsListComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
@@ -17,11 +17,11 @@ namespace CarBook.WebUI.ViewComponents.FooterAddressComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:44319/api/FooterAdresses");
+            var responseMessage = await client.GetAsync("https://localhost:44319/api/Blogs/GetLast3BlogsWithAuthorsList");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultFooterAddressDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultLast3BlogsWithAuthors>>(jsonData);
                 return View(values);
             }
             return View();
