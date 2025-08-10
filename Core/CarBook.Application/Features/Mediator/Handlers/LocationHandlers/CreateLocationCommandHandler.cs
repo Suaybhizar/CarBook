@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace CarBook.Application.Features.Mediator.Handlers.LocationHandlers
 {
-    public class CreateLocationCommandHandler : IRequestHandler<CreateLocationCommand>
+    public class CreateTagCloudnCommandHandler : IRequestHandler<CreateLocationCommand>
     {
         private readonly IRepository<Location> _repository;
 
-        public CreateLocationCommandHandler(IRepository<Location> repository)
+        public CreateTagCloudnCommandHandler(IRepository<Location> repository)
         {
             _repository = repository;
         }
