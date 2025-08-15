@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarBook.Dto.BrandDtos
 {
-    public class ResultBrandDto
+    public class UpdateBrandDto
     {
-
         public int BrandID { get; set; }
         public string Name { get; set; }
-
     }
 }

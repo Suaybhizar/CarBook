@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarBook.Dto.BrandDtos
+namespace CarBook.Dto.FeatureDtos
 {
-    public class ResultBrandDto
+    public class UpdateFeatureDto
     {
-
-        public int BrandID { get; set; }
+        public int FeatureID { get; set; }
         public string Name { get; set; }
-
     }
 }
