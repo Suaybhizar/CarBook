@@ -35,7 +35,6 @@ namespace CarBook.WebUI.Controllers
                                                 Value = x.LocationID.ToString()
                                             }).ToList();
             ViewBag.v = values2;
-
             return View();
         }
         [HttpPost]

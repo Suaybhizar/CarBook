@@ -15,12 +15,13 @@ namespace CarBook.WebApi.Controllers
         {
             _mediator = mediator;
         }
-      
+
         [HttpGet]
         public async Task<IActionResult> GetCarPricingWithCarList()
         {
             var values = await _mediator.Send(new GetCarPricingWithCarQuery());
             return Ok(values);
         }
+
     }
 }
