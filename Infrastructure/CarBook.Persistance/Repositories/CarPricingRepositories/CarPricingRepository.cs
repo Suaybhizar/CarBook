@@ -47,6 +47,7 @@ namespace CarBook.Persistance.Repositories.CarPricingRepositories
                     {
                         CarPricingViewModel carPricingViewModel = new CarPricingViewModel()
                         {
+                            Brand = reader["Name"].ToString(),
                             Model = reader["Model"].ToString(),
                             CoverImageUrl = reader["CoverImageUrl"].ToString(),
                             Amounts = new List<decimal>
@@ -66,16 +67,3 @@ namespace CarBook.Persistance.Repositories.CarPricingRepositories
         }
     }
 }
-
-//var values = from x in _context.CarPricings
-//             group x by x.PricingID into g
-//             select new
-//             {
-//                 CarID = g.Key,
-//                 DailyPrice = g.Where(y => y.CarPricingID == 2).Sum(z => z.Amount),
-//                 WeeklyPrice = g.Where(y => y.CarPricingID == 3).Sum(z => z.Amount),
-//                 MonthlyPrice = g.Where(y => y.CarPricingID == 6).Sum(z => z.Amount),
-
-//             };
-//return values.ToList();
-
