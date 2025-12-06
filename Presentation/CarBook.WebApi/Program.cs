@@ -8,10 +8,12 @@ using CarBook.Application.Features.CQRS.Queries.CarQueris;
 using CarBook.Application.Features.RepositoryPattern;
 using CarBook.Application.Interfaces;
 using CarBook.Application.Interfaces.BlogInterfaces;
+using CarBook.Application.Interfaces.CarDescriptionInterfaces;
 using CarBook.Application.Interfaces.CarFeatureInterfaces;
 using CarBook.Application.Interfaces.CarInterfaces;
 using CarBook.Application.Interfaces.CarPricingInterfaces;
 using CarBook.Application.Interfaces.RentACarInterfaces;
+using CarBook.Application.Interfaces.ReviewInterfaces;
 using CarBook.Application.Interfaces.StatisticsInterfaces;
 using CarBook.Application.Interfaces.TagCloudInterfaces;
 using CarBook.Application.Services;
@@ -19,11 +21,13 @@ using CarBook.Domain.Entities;
 using CarBook.Persistance.Context;
 using CarBook.Persistance.Repositories;
 using CarBook.Persistance.Repositories.BlogRepositories;
+using CarBook.Persistance.Repositories.CarDescriptionRepositories;
 using CarBook.Persistance.Repositories.CarFeatureRepositories;
 using CarBook.Persistance.Repositories.CarPricingRepositories;
 using CarBook.Persistance.Repositories.CarRepositories;
 using CarBook.Persistance.Repositories.CommentRepositories;
 using CarBook.Persistance.Repositories.RentACarRepositories;
+using CarBook.Persistance.Repositories.ReviewRepositories;
 using CarBook.Persistance.Repositories.StatisticsRepositories;
 using CarBook.Persistance.Repositories.TagCloudRepositories;
 
@@ -40,6 +44,8 @@ builder.Services.AddScoped(typeof(ITagCloudRepository), typeof(TagCloudRepositor
 builder.Services.AddScoped(typeof(IRentACarRepository), typeof(RentACarRepository));
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(CommentRepository<>));
 builder.Services.AddScoped(typeof(ICarFeatureRepository), typeof(CarFeatureRepository));
+builder.Services.AddScoped(typeof(ICarDesriptionRepository), typeof(CarDesriptionRepository));
+builder.Services.AddScoped(typeof(IReviewRepository), typeof(ReviewRepository));
 
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
