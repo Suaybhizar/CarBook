@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,6 +28,11 @@ namespace CarBook.Persistance.Repositories
         public async Task<List<T>> GetAllAsync()
         {
             return await _context.Set<T>().ToListAsync();
+        }
+
+        public async Task<T?> GetByFilterAysnc(Expression<Func<T, bool>> flter)
+        {
+           return await _context.Set<T>().SingleOrDefaultAsync(flter);
         }
 
         public async Task<T> GetByIdAsync(int id)

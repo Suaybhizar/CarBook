@@ -14,6 +14,8 @@ namespace CarBook.Persistance.Context
         {
             optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;initial Catalog=CarBookDb;integrated Security=true;TrustServerCertificate=true");
         }
+        public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<AppRole> AppRoles { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Brand> Brands { get; set; }
