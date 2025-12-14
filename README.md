@@ -208,7 +208,7 @@ Bu sayede:
 
 ### 🔹 Backend
 - .NET 8 (Asp.Net Core API)
-- C# 12
+- C#
 - Entity Framework Core 8
 - MediatR
 - AutoMapper
