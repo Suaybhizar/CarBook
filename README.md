@@ -216,7 +216,7 @@ Bu sayede:
 - Repository + Unit of Work Pattern
 - MSSQL Server
 - JWT Authentication
-- SignalR (Gerçek Zamanlı Bildirimler)
+- SignalR (Gerçek Zamanlı Araba Sayısı Bilgisi)
 - Swagger
 - LINQ
 
