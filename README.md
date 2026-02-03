@@ -204,36 +204,6 @@ Bu sayede:
 
 ---
 
-## 🛠 Kullanılan Teknolojiler
-
-### 🔹 Backend
-- .NET 8 (Asp.Net Core API)
-- C#
-- Entity Framework Core 8
-- MediatR
-- AutoMapper
-- FluentValidation
-- Repository + Unit of Work Pattern
-- MSSQL Server
-- JWT Authentication
-- SignalR (Gerçek Zamanlı Araba Sayısı Bilgisi)
-- Swagger
-- LINQ
-
-### 🔹 Frontend
-- ASP.NET MVC
-- Bootstrap 5
-- jQuery – AJAX
-- SweetAlert2
-- HTML5 / CSS3 (Responsive UI)
-
-### 🔹 DevOps & Araçlar
-- Git & GitHub
-- Postman
-- Swagger UI
-
----
-
 # 🧩 Tam Mimari Şema (Mermaid Diagram)
 
 ```mermaid
